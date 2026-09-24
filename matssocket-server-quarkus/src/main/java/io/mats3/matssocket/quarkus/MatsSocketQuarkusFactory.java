@@ -17,6 +17,8 @@ import io.mats3.matssocket.impl.DefaultMatsSocketServer;
  *         matsFactory, csaf, authPlugin, "/matssocket");
  * // Wire up your @WebSocket endpoint to delegate to setup.transport()
  * }</pre>
+ * When the {@code csaf} is a {@code ClusterStoreAndForward_SQL} on Quarkus' Agroal pool, create it over
+ * {@code new StatementClosingDataSource(agroalDataSource)}; see {@link StatementClosingDataSource} for why.
  *
  * @author Thor Egil Kolltveit 2026-04-12 - thoregil@kolltveit.org
  */
